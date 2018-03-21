@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/wow.min.js"></script>
+</head>
+
+<body class="container">
+    <div class="btns">
+        <button type="button" class="btns_in" id="sign_in">Sign-in</button>
+        <button type="button" class="btns_up" id="sign_up">Sign-up</button>
+    </div>
+    <div class="main_div">
+        <div class="each_box wow" id="left_box">
+            <form action="#">
+                <div class="imgcontainer"> <img src="/images/in.png" alt="Avatar" class="avatar"> </div>
+                <div>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me </label>
+                </div>
+                <div style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Cancel</button> <span class="psw">Forgot <a href="#">password?</a></span> </div>
+            </form>
+        </div>
+        <div class="each_box wow" id="right_box">
+            <form action="#">
+                <div class="imgcontainer"> <img src="/images/up.png" alt="Avatar" class="avatar"> </div>
+                <div>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit">Submit</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me </label>
+                </div>
+                <div style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br style="clear:both;" />
+    <script>
+        new WOW().init();
+        var btnHight = $('.btns_in').css('height')
+        var winHight = window.innerHeight
+        $("#sign_in").click(function () {
+            //            $("#right_box").removeClass('bounceInRight')
+            //            $("#right_box").addClass('bounceOutRight')
+            //            $("#right_box").css('display', 'none')
+            //            $("#left_box").css('display', 'inline').addClass('bounceInLeft')
+            $("#right_box").fadeOut()
+            $("#left_box").fadeToggle()
+        });
+        $("#sign_up").click(function () {
+            //            $("#left_box").removeClass('bounceInLeft')
+            //            $("#left_box").addClass('bounceOutLeft')
+            //            $("#left_box").css('display', 'none')
+            //            $("#right_box").css('display', 'inline').addClass('bounceInRight')
+            $("#left_box").fadeOut()
+            $("#right_box").fadeToggle()
+        });
+    </script>
+</body>
+
+</html>
