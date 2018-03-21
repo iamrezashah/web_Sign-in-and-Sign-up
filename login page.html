@@ -60,18 +60,10 @@
         var btnHight = $('.btns_in').css('height')
         var winHight = window.innerHeight
         $("#sign_in").click(function () {
-            //            $("#right_box").removeClass('bounceInRight')
-            //            $("#right_box").addClass('bounceOutRight')
-            //            $("#right_box").css('display', 'none')
-            //            $("#left_box").css('display', 'inline').addClass('bounceInLeft')
             $("#right_box").fadeOut()
             $("#left_box").fadeToggle()
         });
         $("#sign_up").click(function () {
-            //            $("#left_box").removeClass('bounceInLeft')
-            //            $("#left_box").addClass('bounceOutLeft')
-            //            $("#left_box").css('display', 'none')
-            //            $("#right_box").css('display', 'inline').addClass('bounceInRight')
             $("#left_box").fadeOut()
             $("#right_box").fadeToggle()
         });
